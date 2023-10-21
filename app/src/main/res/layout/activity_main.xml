@@ -7,7 +7,6 @@
     android:padding="32dp"
     tools:context=".MainActivity">
 
-    <!-- Email input -->
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="0dp"
@@ -19,7 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Password input -->
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
@@ -31,7 +29,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput" />
 
-    <!-- Login button -->
     <Button
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"

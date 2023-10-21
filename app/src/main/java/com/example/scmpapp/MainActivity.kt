@@ -1,5 +1,6 @@
 package com.example.scmpapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
@@ -63,10 +64,15 @@ class MainActivity : AppCompatActivity() {
 
             if (result != null && result.isNotBlank()) {
                 Toast.makeText(this@MainActivity, "Logged in successfully! Token: $result", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this@MainActivity, StaffListActivity::class.java)
+                intent.putExtra("TOKEN", result)
+                startActivity(intent)
+                finish()
             } else {
                 Toast.makeText(this@MainActivity, "Login failed!", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 
     private fun isValidEmail(email: String): Boolean {
