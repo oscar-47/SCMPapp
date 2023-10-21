@@ -106,5 +106,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    // Avoid returning to the StaffListActivity when press the back button after logging out
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 }
 
